@@ -1,15 +1,1 @@
-{
-"siteSpeed": 2.5,
-"homepageButton": "Yes",
-"profitCenters": "Yes",
-"inventoryAboveFold": "Yes",
-"facetedSearch": "Yes",
-"customBanners": "Custom",
-"homepageNavWorking": "Yes",
-"expiredBanners": "No",
-"numBanners": 5,
-"slideshowLocation": "Top",
-"mobileFriendlyBanners": "Yes",
-"bannersLinked": "Yes",
-"homepageComments": "Homepage looks great!",
-}
+{"siteSpeed": 2.5,"homepageButton": "Yes","profitCenters": "Yes","inventoryAboveFold": "Yes","facetedSearch": "Yes","customBanners": "Custom","homepageNavWorking": "Yes","expiredBanners": "No","numBanners": 5,"slideshowLocation": "Top","mobileFriendlyBanners": "Yes","bannersLinked": "Yes","homepageComments": "Homepage looks great!",}
