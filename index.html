@@ -4,35 +4,100 @@
 	<title>jQuery JSON Forms Fields</title>
 	
 	<script type="text/javascript" src="src/jquery-2.1.1.js"></script>
-	<script type="text/javascript" src="src/jquery-json-form-binding.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-
-			//var json = {name: "Waleed", age: 23, gender: "Male"};
-			
-			 $.getJSON("https://raw.githubusercontent.com/KyleMitchel/WebAudit/master/data.json")
-				.done(function( data ) {
-				console.log(data)
-			});
-
-			$("#myform").jsonToForm(json,
-			{ 
-				age: function(value){
-					$('[name="age"]').val(value);
-				}
-
-			});
-
-		});
-	</script>
-
+	<script type="text/javascript" src="src/jquery-json-form-binding.min.js"></script>
+	<script type="text/javascript" src="src/main.js"></script>
 </head>
 <body>
-
 	<form id="myform">
-		<input type="" name="name">
-		<input type="" name="age">
-		<input type="" name="gender">
+		<div class="form-field">
+			<label>Dealer Name</label>
+			<input type="" name="dealerName">
+		</div>
+		<div class="form-field">
+			<label>Dealer Website</label>
+			<input type="url" name="dealerWebsite">
+		</div>
+		<div class="form-field">
+			<label>Site Speed</label>
+			<input type="" name="siteSpeed">
+		</div>
+		<div class="form-field">
+			<label>Is there a homepage button?</label>
+			<label>Yes</label>
+			<input type="radio" value="Yes" name="homepageButton">
+			<label>No</label>
+			<input type="radio" value="No" name="homepageButton">
+		</div>
+		<div class="form-field">
+			<label>Quick access to all 4 profit centers?</label>
+			<label>Yes</label>
+			<input type="radio" name="profitCenters" value="Yes">
+			<label>No</label>
+			<input type="radio" name="profitCenters" value="No">
+		</div>
+		<div class="form-field">
+			<label>Inventory search above the fold?</label>
+			<label>Yes</label>
+			<input type="radio" name="inventoryAboveFold" value="Yes">
+			<label>No</label>
+			<input type="radio" name="inventoryAboveFold" value="No">
+		</div>
+		<div class="form-field">
+			<label>Faceted search?</label>
+			<label>Yes</label>
+			<input type="radio" name="facetedSearch" value="Yes">
+			<label>No</label>
+			<input type="radio" name="facetedSearch" value="No">
+		</div>
+		<div class="form-field">
+			<label>Custom graphic banners?</label>
+			<label>Yes</label>
+			<input type="radio" name="customBanners" value="Yes">
+			<label>No</label>
+			<input type="radio" name="customBanners" value="No">
+		</div>
+		<div class="form-field">
+			<label>Homepage navigation links working?</label>
+			<label>Yes</label>
+			<input type="radio" name="homepageNavWorking" value="Yes">
+			<label>No</label>
+			<input type="radio" name="homepageNavWorking" value="No">
+		</div>
+		<div class="form-field">
+			<label>Any expired homepage banners?</label>
+			<label>Yes</label>
+			<input type="radio" name="expiredBanners" value="Yes">
+			<label>No</label>
+			<input type="radio" name="expiredBanners" value="No">
+		</div>
+		<label># of Banners?</label>
+		<input type="number" name="numBanners">
+		<div class="form-field">
+			<label>Mobile friendly banners?</label>
+			<label>Yes</label>
+			<input type="radio" name="mobileFriendlyBanners" value="Yes">
+			<label>No</label>
+			<input type="radio" name="mobileFriendlyBanners" value="No">
+		</div>
+		<div class="form-field">
+			<label>Banners linked to correct vehicles?</label>
+			<label>Yes</label>
+			<input type="radio" name="bannersLinked" value="Yes">
+			<label>No</label>
+			<input type="radio" name="bannersLinked" value="No">
+		</div>
+		<div class="form-field">
+			<label>Location of slideshow</label>
+			<input type="" name="slideshowLocation">
+		</div>
+		<div class="form-field">
+			<label>Comments</label>
+			<textarea name="homepageComments"></textarea>
+		</div>
+		<div class="form-field">
+			<input type="submit" id="btn" name="btn" class="btn" value="Submit" />
+		</div>
+    </div>
 	</form>
 
 </body>

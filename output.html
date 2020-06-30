@@ -1,0 +1,101 @@
+<html>
+<head>
+	<link rel="stylesheet" href="C:/Users/Kyle/Desktop/JQuery-JSON-Form-Binding-Master/style/output.css">
+	<script type="text/javascript" src="src/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="src/jquery-json-form-binding.min.js"></script>
+	<script type="text/javascript" src="src/output.js"></script>
+	<script type="text/javascript" src="src/html2canvas.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="print">
+<form id="myform">
+<!-- ==== HEADER ==== -->
+	<div id="header">
+		<img class="CFLogo" src="https://kylemitchel.github.io/WebAudit/CFLogo.png">
+		<h1 class="heading">Website Audit</h1>
+		<p id="dealerInfo">
+			Dealer Name: <input name="dealerName" readonly></span></br>
+			URL: <input name="dealerWebsite" readonly></br>
+			Website Provider: <input name="siteProvider" readonly>
+		</p>
+		<p id="dateCode">
+			Dealer Code: <input name="dealerCode" readonly></br>
+			Date Reviewed: <span id="$todaysDate"></span>
+		</p>.
+		<hr id="headerHR">
+	</div>
+<!-- ==== PAGE SPEED ==== -->
+	<div id="googleSpeed">
+		<img class="center" src="https://kylemitchel.github.io/WebAudit/twg-lockup.png">
+		<h2 id="pageSpeed">Your mobile site speed is <input name="siteSpeed" readonly>seconds.</h2>
+		<table id="speeds">
+			<tr id="speedColors">
+				<th id="slow">Slow</th>
+				<th id="average">Average</th>
+				<th id="fast">Fast</th>
+			</tr>
+			<tr id="speedText">
+				<td>Slow sites start to load in over 2.5 seconds.</td>
+				<td>Average sites start to load in 1 to 2.5 seconds. </td>
+				<td>Fast pages start to load in under 1 second. </td>
+			</tr>
+		</table>
+		<p class="sectionDisclaimer">According to Google’s research 53% of people will leave a mobile page if it takes longer than 3 seconds to load.</p>
+	</div>
+<!-- ==== HOMEPAGE ==== -->
+	<div id="homepage">
+		<table id="homepageTable">
+		<tr>
+			<td class="sectionHeading" id="homepageHeading" colspan="4">
+				<img src="https://kylemitchel.github.io/WebAudit/homepage.png">
+				<h3>Homepage Overview</h3>
+				<h4 id="homepageHeadingDisclaimer">Keep it above the fold.</h4>
+			</td>
+		</tr>
+		<tr>
+			<td>Is there a Homepage Button?</td>
+			<td><input name="homepageButton" readonly></td>
+			<td>Homepage navigation links working?</td>
+			<td><input name="homepageNavWorking" readonly></td>
+		</tr>
+		<tr>
+			<td>Quick access to all (4) Profit Centers?</td>
+			<td><input name="profitCenters" readonly></td>
+			<td>Any Expired Homepage Banners?</td>
+			<td><input name="expiredBanners" readonly></td>
+		</tr>
+		<tr>
+			<td>Inventory Search Above the fold?</td>
+			<td><input name="inventoryAboveFold" readonly></td>
+			<td>Number of Banners</td>
+			<td><input name="numBanners" readonly></td>
+		</tr>
+		<tr>
+			<td>Faceted Search</td>
+			<td><input name="facetedSearch" readonly></td>
+			<td>Location of Slideshow </td>
+			<td><input name="slideshowLocation" readonly></td>
+		</tr>
+		<tr>
+			<td>Custom Graphic Banners?</td>
+			<td><input name="customBanners" readonly></td>
+			<td>Mobile Friendly Banners?</td>
+			<td><input name="mobileFriendlyBanners" readonly></td>
+		</tr>
+		<tr>
+			<td colspan="2"></td>
+			<td>Banners link to correct vehicles?</td>
+			<td><input name="bannersLinked" readonly></td>
+		</tr>
+		<tr>
+			<td colspan="4">Comments / Action Items: <input name="homepageComments" readonly></td>
+		</tr>
+		</table>
+		<p class="sectionDisclaimer">Keep it above the fold!  Call to action buttons and vital info should be above the fold.  However people do scroll!  On a mobile site, around half of all users start to scroll within 10 seconds, and 90% within 14 seconds.</p>
+	</div>
+</form>
+</div>
+<button id="cmd">generate PDF</button>
+</body>
+</html>
